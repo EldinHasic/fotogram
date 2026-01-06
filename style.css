@@ -15,6 +15,11 @@ body {
     margin: 0;
 }
 
+h1 {
+    text-align: center;
+    margin: 128px 0 64px 0;
+}
+
 .content-limit {
     max-width: 1440px;
     margin: 0 auto;
@@ -31,4 +36,57 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+/*main*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 128px;
+}
+
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.image {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    border-width: 2px;
+}
+
+/*footer*/
+
+footer {
+    background-color: #09212A;
+    padding: 24px 48px;
+    border-radius: 95% 95% 0 0;
+}
+
+.DA-Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.DA {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+span {
+    font-weight: 400;
+    color: #627B84;
 }
