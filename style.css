@@ -20,6 +20,7 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 48px;
     margin: 128px 0 64px 0;
 }
 
@@ -45,6 +46,7 @@ header {
 
 main {
     flex: 1;
+    margin-bottom: 64px;
 }
 
 .main-section {
@@ -88,4 +90,26 @@ footer {
 span {
     font-weight: 400;
     color: #627B84;
+}
+
+@media (max-width:640px) {
+
+    h1 {
+        font-size: 32px;
+        padding: 0 16px;
+         margin: 48px 0 48px 0;
+    }
+
+    header {
+        display: flex;
+    }
+
+    .image {
+        height: 120px;
+        width: 120px;
+    }
+
+    span {
+        font-size: 12px;
+    }
 }
