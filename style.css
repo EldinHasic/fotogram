@@ -10,6 +10,9 @@ html {
 
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background: #06171E;
     color: #FFFFFF;
     margin: 0;
@@ -41,10 +44,7 @@ header {
 /*main*/
 
 main {
-    display: flex;
-    flex-direction: column;
     flex: 1;
-    margin-bottom: 128px;
 }
 
 .main-section {
@@ -67,7 +67,6 @@ main {
 footer {
     background-color: #09212A;
     padding: 24px 48px;
-    border-radius: 95% 95% 0 0;
 }
 
 .DA-Icon {
