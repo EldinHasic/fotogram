@@ -22,5 +22,18 @@ function renderImages() {
 }
 
 function getImageHTML(index) {
-    return `<img src="${Images[index]}" class="image">`
+    return `<img onclick="openDialog()" src="${Images[index]}"class="image">`
+}
+
+//Experiment Dialog//
+
+const dialogRef = document.getElementById('ImageDialog');
+
+function openDialog() {
+    dialogRef.showModal();
+    dialogRef.innerHTMl += getImageHTML(Images);
+}
+
+function closeDialog() {
+    dialogRef.close();
 }
