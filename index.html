@@ -31,10 +31,18 @@
                 <header>
                     <img onclick="closeDialog()" src="img/close.svg" alt="">
                 </header>
-                <footer>
-                    <img src="img/arrow-left.svg" alt="">
-                    <img src="img/arrow-right.svg" alt="">
-                </footer>
+                <main>
+                    <img id="currentImage" class="image" src="" alt="">
+                </main>
+                <nav>
+                    <button onclick="showPreviousImage()">
+                        <img src="img/arrow-left.svg" alt="">
+                    </button>
+                    <p id="currentImageNumber"></p>
+                    <button onclick="showNextImage()">
+                        <img src="img/arrow-right.svg" alt="">
+                    </button>
+                </nav>
             </dialog>
 
         </section>

@@ -13,6 +13,8 @@ let Images = [
     'img/vortex.jpg'
 ];
 
+let currentIndex = 0;
+const dialogRef = document.getElementById('ImageDialog');
 
 function renderImages() {
     let MainSectionRef = document.getElementById('MainSection');
@@ -22,18 +24,35 @@ function renderImages() {
 }
 
 function getImageHTML(index) {
-    return `<img onclick="openDialog()" src="${Images[index]}"class="image">`
+    return `<img onclick="openDialog(${index})" src="${Images[index]}" class="image">`
 }
 
-//Experiment Dialog//
-
-const dialogRef = document.getElementById('ImageDialog');
-
-function openDialog() {
+function openDialog(index) {
+    currentIndex = index;
+    setDialogImage();
     dialogRef.showModal();
-    dialogRef.innerHTMl += getImageHTML(Images);
+}
+
+function setDialogImage() {
+    const img = document.getElementById("currentImage");
+    img.src = Images[currentIndex];
+
+    let pRef = document.getElementById("currentImageNumber");
+    pRef.innerHTML = `${currentIndex + 1}/${Images.length}`
 }
 
 function closeDialog() {
     dialogRef.close();
+}
+
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % Images.length;
+    currentImage.src = Images[currentIndex];
+    setDialogImage();
+}
+
+function showPreviousImage() {
+    currentIndex = (currentIndex - 1 + Images.length) % Images.length;
+    currentImage.src = Images[currentIndex];
+    setDialogImage();
 }
