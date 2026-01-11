@@ -29,7 +29,11 @@ h1 {
     margin: 0 auto;
 }
 
-/*header*/
+main {
+    flex: 1;
+}
+
+/*Header*/
 
 .MainHeader {
     background-color: #09212A;
@@ -42,13 +46,9 @@ h1 {
     gap: 12px;
 }
 
-/*main*/
+/*Main Section*/
 
-main {
-    flex: 1;
-}
-
-#MainSection {
+.MainSection {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -70,6 +70,7 @@ main {
 } 
 
 /*Dialog*/
+
 .DialogAlbum {
     margin: auto;
     background-color: #09212A;
@@ -111,7 +112,7 @@ main {
     color: #FFFFFF;
 }
 
-/*footer*/
+/*Footer*/
 
 footer {
     background-color: #09212A;
@@ -138,6 +139,8 @@ span {
     font-weight: 400;
     color: #627B84;
 }
+
+/*Responsive*/
 
 @media (max-width:640px) {
 

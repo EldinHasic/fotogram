@@ -9,7 +9,9 @@
     <script src="script.js" defer></script>
 </head>
 
+
 <body onload="renderImages()">
+    <!--Header Start-->
     <header class="MainHeader">
         <nav class="ContentLimit">
             <article class="HeaderLogo">
@@ -18,13 +20,16 @@
             </article>
         </nav>
     </header>
+    <!--Header End-->
 
+    <!--Main Section Start-->
     <main>
         <h1>Your personal photo album</h1>
 
         <section class="ContentLimit">
-            <section id="MainSection"></section>
+            <section class="MainSection" id="SectionMain"></section>
 
+            <!--Dialog Start-->
             <dialog onclick="closeDialog()"
                 onkeydown="if(event.key === 'ArrowRight') {showNextImage()} else if(event.key === 'ArrowLeft') {showPreviousImage()}"
                 class=" DialogAlbum" id="myDialog">
@@ -42,10 +47,13 @@
                     </nav>
                 </section>
             </dialog>
+            <!--Dialog End-->
 
         </section>
     </main>
+    <!--Main Section End-->
 
+    <!--Footer Start-->
     <footer>
         <section class="ContentLimit">
             <article class="DA">
@@ -57,6 +65,7 @@
             </article>
         </section>
     </footer>
+    <!--Footer End-->
 </body>
 
 </html>
