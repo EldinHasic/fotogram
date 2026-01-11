@@ -10,7 +10,7 @@
 </head>
 
 <body onload="renderImages()">
-    <header>
+    <header class="MainHeader">
         <nav class="ContentLimit">
             <div class="HeaderLogo">
                 <img src="img/logo.svg" alt="FotogramLogo">
@@ -27,21 +27,17 @@
 
             </div>
 
-            <dialog class="DialogTest" id="ImageDialog">
-                <header>
+            <dialog class="DialogAlbum" id="ImageDialog">
+                <header class="DialogHeader">
                     <img onclick="closeDialog()" src="img/close.svg" alt="">
                 </header>
                 <main>
-                    <img id="currentImage" class="image" src="" alt="">
+                    <img id="currentImage" class="DialogImage" src="" alt="">
                 </main>
-                <nav>
-                    <button onclick="showPreviousImage()">
-                        <img src="img/arrow-left.svg" alt="">
-                    </button>
+                <nav class="DialogNav">
+                    <img onclick="showPreviousImage()" src="img/arrow-left.svg" alt="arrow-left">
                     <p id="currentImageNumber"></p>
-                    <button onclick="showNextImage()">
-                        <img src="img/arrow-right.svg" alt="">
-                    </button>
+                    <img onclick="showNextImage()" src="img/arrow-right.svg" alt="arrow-right">
                 </nav>
             </dialog>
 

@@ -31,7 +31,7 @@ h1 {
 
 /*header*/
 
-header {
+.MainHeader {
     background-color: #09212A;
     padding: 0 48px;
 }
@@ -46,7 +46,6 @@ header {
 
 main {
     flex: 1;
-    margin-bottom: 64px;
 }
 
 #MainSection {
@@ -54,6 +53,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
+    margin-bottom: 64px;
 }
 
 .image {
@@ -62,6 +62,48 @@ main {
     height: 150px;
     border-radius: 16px;
     border-width: 2px;
+}
+
+/*Dialog*/
+.DialogAlbum {
+    margin: auto;
+    background-color: #09212A;
+    height: 620px;
+    width: 600px;
+    padding: 0;
+    border-radius: 16px;
+    border-width: 0;
+}
+
+.DialogHeader {
+    padding: 10px;
+    height: 32px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.DialogAlbum main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DialogImage {
+    object-fit: cover;
+    height: 480px;
+    width: 480px;
+    border-radius: 16px;
+    border-width: 2px;
+}
+
+.DialogNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+    gap: 10px;
+    color: #FFFFFF;
 }
 
 /*footer*/
