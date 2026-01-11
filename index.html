@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
+     <link rel="icon" type="image/x-icon" href="/img/camera.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -34,11 +35,11 @@
                 onkeydown="if(event.key === 'ArrowRight') {showNextImage()} else if(event.key === 'ArrowLeft') {showPreviousImage()}"
                 class=" DialogAlbum" id="myDialog">
                 <section onclick="BubblingProtec(event)">
-                    <header class="DialogHeader" id="Dialog">
+                    <header class="DialogHeader" id="HeaderDialog">
                         <img onclick="closeDialog()" src="img/close.svg" alt="">
                     </header>
                     <main>
-                        <img id="currentImage" class="DialogImage" src="" alt="">
+                        <img id="currentImage" class="DialogImage" src="" alt="dialog-image">
                     </main>
                     <nav class="DialogNav">
                         <img onclick="showPreviousImage()" src="img/arrow-left.svg" alt="arrow-left">

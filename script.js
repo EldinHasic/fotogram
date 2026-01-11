@@ -15,6 +15,7 @@ let Images = [
 
 let currentIndex = 0;
 const DIALOGREF = document.getElementById('myDialog');
+const HEADERDIALOGREF = document.getElementById('HeaderDialog');
 
 //Template Function Main Section//
 function renderImages() {
@@ -26,7 +27,7 @@ function renderImages() {
 
 //Add Images Dynamic Function//
 function getImageHTML(index) {
-    return `<img onclick="openDialog(${index})" tabindex="0" role="button" onkeydown="if(event.key==='Enter') openDialog(${index})" src="${Images[index]}" class="image">`
+    return `<img onclick="openDialog(${index})" tabindex="0" role="button" onkeydown="if(event.key==='Enter') openDialog(${index})" src="${Images[index]}" alt="fotogram-image${index+1}" class="image">`
 }
 
 //Open Dialog Function//
@@ -40,6 +41,9 @@ function openDialog(index) {
 function setDialogImage() {
     const IMG = document.getElementById("currentImage");
     IMG.src = Images[currentIndex];
+
+
+    HEADERDIALOGREF.innerHTML = Images[currentIndex] + `<img onclick="closeDialog()" src="img/close.svg" alt="dialog-image">`
 
     let pRef = document.getElementById("currentImageNumber");
     pRef.innerHTML = `${currentIndex + 1}/${Images.length}`

@@ -85,7 +85,9 @@ main {
     padding: 10px;
     height: 32px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    color: #FFFFFF;
+    text-align: center;
 
 }
 
