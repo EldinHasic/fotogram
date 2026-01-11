@@ -35,7 +35,8 @@
                 onkeydown="if(event.key === 'ArrowRight') {showNextImage()} else if(event.key === 'ArrowLeft') {showPreviousImage()}"
                 class=" DialogAlbum" id="myDialog">
                 <section onclick="BubblingProtec(event)">
-                    <header class="DialogHeader" id="HeaderDialog">
+                    <header class="DialogHeader">
+                        <h2 id="ImageTitle"></h2>
                         <img onclick="closeDialog()" src="img/close.svg" alt="">
                     </header>
                     <main>
