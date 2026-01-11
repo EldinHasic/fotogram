@@ -64,6 +64,11 @@ main {
     border-width: 2px;
 }
 
+.image:hover {
+    width: 140px;
+    height: 140px;
+} 
+
 /*Dialog*/
 .DialogAlbum {
     margin: auto;
@@ -152,6 +157,6 @@ span {
     }
 
     span {
-        font-size: 12px;
+        font-size: 16px;
     }
 }

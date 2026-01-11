@@ -12,10 +12,10 @@
 <body onload="renderImages()">
     <header class="MainHeader">
         <nav class="ContentLimit">
-            <div class="HeaderLogo">
+            <article class="HeaderLogo">
                 <img src="img/logo.svg" alt="FotogramLogo">
                 <h2>Fotogram</h2>
-            </div>
+            </article>
         </nav>
     </header>
 
@@ -23,38 +23,39 @@
         <h1>Your personal photo album</h1>
 
         <section class="ContentLimit">
-            <div id="MainSection">
+            <section id="MainSection"></section>
 
-            </div>
-
-            <dialog class="DialogAlbum" id="ImageDialog">
-                <header class="DialogHeader">
-                    <img onclick="closeDialog()" src="img/close.svg" alt="">
-                </header>
-                <main>
-                    <img id="currentImage" class="DialogImage" src="" alt="">
-                </main>
-                <nav class="DialogNav">
-                    <img onclick="showPreviousImage()" src="img/arrow-left.svg" alt="arrow-left">
-                    <p id="currentImageNumber"></p>
-                    <img onclick="showNextImage()" src="img/arrow-right.svg" alt="arrow-right">
-                </nav>
+            <dialog onclick="closeDialog()"
+                onkeydown="if(event.key === 'ArrowRight') {showNextImage()} else if(event.key === 'ArrowLeft') {showPreviousImage()}"
+                class=" DialogAlbum" id="myDialog">
+                <section onclick="BubblingProtec(event)">
+                    <header class="DialogHeader" id="Dialog">
+                        <img onclick="closeDialog()" src="img/close.svg" alt="">
+                    </header>
+                    <main>
+                        <img id="currentImage" class="DialogImage" src="" alt="">
+                    </main>
+                    <nav class="DialogNav">
+                        <img onclick="showPreviousImage()" src="img/arrow-left.svg" alt="arrow-left">
+                        <p id="currentImageNumber"></p>
+                        <img onclick="showNextImage()" src="img/arrow-right.svg" alt="arrow-right">
+                    </nav>
+                </section>
             </dialog>
 
         </section>
     </main>
 
     <footer>
-        <div class="ContentLimit">
-            <div class="DA">
-                <div class="DA-Icon">
+        <section class="ContentLimit">
+            <article class="DA">
+                <article class="DA-Icon">
                     <img height="32px" src="img/Icon.svg" alt="DA-Icon">
                     <div>Developer <br> Akademie</div>
-                </div>
+                </article>
                 <span> © 2023 Developer Akademie GmbH</span>
-            </div>
-        </div>
-
+            </article>
+        </section>
     </footer>
 </body>
 

@@ -14,7 +14,7 @@ let Images = [
 ];
 
 let currentIndex = 0;
-const dialogRef = document.getElementById('ImageDialog');
+const DIALOGREF = document.getElementById('myDialog');
 
 function renderImages() {
     let MainSectionRef = document.getElementById('MainSection');
@@ -24,25 +24,29 @@ function renderImages() {
 }
 
 function getImageHTML(index) {
-    return `<img onclick="openDialog(${index})" src="${Images[index]}" class="image">`
+    return `<img onclick="openDialog(${index})" tabindex="0" role="button" onkeydown="if(event.key==='Enter') openDialog(${index})" src="${Images[index]}" class="image">`
 }
 
 function openDialog(index) {
     currentIndex = index;
     setDialogImage();
-    dialogRef.showModal();
+    DIALOGREF.showModal();
 }
 
 function setDialogImage() {
-    const img = document.getElementById("currentImage");
-    img.src = Images[currentIndex];
+    const IMG = document.getElementById("currentImage");
+    IMG.src = Images[currentIndex];
 
     let pRef = document.getElementById("currentImageNumber");
     pRef.innerHTML = `${currentIndex + 1}/${Images.length}`
 }
 
+function BubblingProtec(event) {
+    event.stopPropagation();
+}
+
 function closeDialog() {
-    dialogRef.close();
+    DIALOGREF.close();
 }
 
 function showNextImage() {
