@@ -57,6 +57,7 @@ main {
     justify-content: center;
     gap: 16px;
     margin-bottom: 64px;
+    padding: 16px;
 }
 
 .image {
@@ -85,7 +86,7 @@ main {
 }
 
 .DialogHeader {
-    padding: 10px;
+    padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

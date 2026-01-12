@@ -17,6 +17,7 @@ let currentIndex = 0;
 const DIALOGREF = document.getElementById('myDialog');
 const HEADERDIALOGREF = document.getElementById('HeaderDialog');
 
+
 //Template Function Main Section//
 function renderImages() {
     let MainSectionRef = document.getElementById('SectionMain');
@@ -67,17 +68,14 @@ function closeDialog() {
 }
 
 //Switch to next Image Function//
-function showNextImage() {
-    currentIndex = (currentIndex + 1) % Images.length;
-    currentImage.src = Images[currentIndex];
+function showNextImage(number) {
+    let checknum = Math.sign(number);
+    if (checknum === 1) {
+        currentIndex = (currentIndex + number) % Images.length;
+    }
+    else (currentIndex = (currentIndex + number + Images.length) % Images.length);
     setDialogImage();
     setImageTitle();
+    currentImage.src = Images[currentIndex];
 }
 
-//Switch to previous Image Function// 
-function showPreviousImage() {
-    currentIndex = (currentIndex - 1 + Images.length) % Images.length;
-    currentImage.src = Images[currentIndex];
-    setDialogImage();
-    setImageTitle();
-}
