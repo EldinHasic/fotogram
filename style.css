@@ -69,8 +69,7 @@ main {
 }
 
 .image:hover {
-    width: 140px;
-    height: 140px;
+ transform: scale(0.9);
 }
 
 /*Dialog*/
@@ -120,7 +119,7 @@ main {
 
 footer {
     background-color: #09212A;
-    padding: 24px 48px;
+    padding: 24px 20px;
 }
 
 .DA-Icon {
