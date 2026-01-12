@@ -32,7 +32,7 @@
 
             <!--Dialog Start-->
             <dialog onclick="closeDialog()"
-                onkeydown="if(event.key === 'ArrowRight') {showNextImage()} else if(event.key === 'ArrowLeft') {showPreviousImage()}"
+                onkeydown="if(event.key === 'ArrowRight') {showNextImage(1)} else if(event.key === 'ArrowLeft') {showNextImage(-1)}"
                 class=" DialogAlbum" id="myDialog">
                 <section onclick="BubblingProtec(event)">
                     <header class="DialogHeader">
